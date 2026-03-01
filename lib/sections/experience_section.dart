@@ -277,9 +277,9 @@ class _TimelineItem extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     experience.role,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 14,
-                      color: AppColors.green,
+                      color: AppColors.gradientEnd.withOpacity(0.8),
                       fontWeight: FontWeight.w600,
                     ),
                   ),

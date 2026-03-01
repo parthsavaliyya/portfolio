@@ -311,8 +311,8 @@ class _HeroSectionState extends State<HeroSection>
     );
   }
 
-  void _downloadResume() {
-    downloadResume();
+  void _downloadResume() async {
+    await downloadResume();
   }
 
   Widget _buildDownloadResumeCTA(BuildContext context) {
@@ -333,7 +333,7 @@ class _HeroSectionState extends State<HeroSection>
             border: isHovered
                 ? null
                 : Border.all(
-                    color: AppColors.green.withOpacity(0.6),
+                    color: AppColors.green,
                     width: 1.5,
                   ),
             color: Colors.transparent,
@@ -353,18 +353,14 @@ class _HeroSectionState extends State<HeroSection>
               Icon(
                 Icons.download_rounded,
                 size: 18,
-                color: isHovered
-                    ? Colors.white
-                    : (isDark ? AppColors.green : AppColors.darkGreen),
+                color: AppColors.green,
               ),
               const SizedBox(width: 8),
               Text(
                 'Download CV',
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  color: isHovered
-                      ? Colors.white
-                      : (isDark ? AppColors.green : AppColors.darkGreen),
+                  color: AppColors.green,
                   fontSize: 15,
                 ),
               ),
@@ -401,7 +397,7 @@ class _HeroSectionState extends State<HeroSection>
             border: isPrimary
                 ? null
                 : Border.all(
-                    color: AppColors.green.withOpacity(0.7),
+                    color: AppColors.green,
                     width: 1.5,
                   ),
             color: isPrimary ? null : Colors.transparent,
@@ -421,18 +417,14 @@ class _HeroSectionState extends State<HeroSection>
               Icon(
                 icon,
                 size: 18,
-                color: isPrimary
-                    ? Colors.white
-                    : (isDark ? AppColors.green : AppColors.darkGreen),
+                color: isPrimary ? Colors.white : AppColors.green,
               ),
               const SizedBox(width: 8),
               Text(
                 label,
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  color: isPrimary
-                      ? Colors.white
-                      : (isDark ? AppColors.green : AppColors.darkGreen),
+                  color: isPrimary ? Colors.white : AppColors.green,
                   fontSize: 15,
                 ),
               ),
@@ -462,12 +454,10 @@ class _HeroSectionState extends State<HeroSection>
               height: containerSize,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                gradient: const SweepGradient(
+                gradient: const LinearGradient(
                   colors: [
                     AppColors.green,
                     AppColors.darkGreen,
-                    Color(0xFF2A5E12),
-                    AppColors.green,
                   ],
                 ),
               ),
@@ -532,16 +522,16 @@ class _HeroSectionState extends State<HeroSection>
   List<Widget> _buildOrbitingIcons(double containerSize) {
     final orbitRadius = containerSize / 2 + 28;
     final icons = [
-      (FontAwesomeIcons.flutter, AppColors.green, '0'),
-      (FontAwesomeIcons.fire, AppColors.green, '2.094'),
-      (Icons.code_rounded, AppColors.darkGreen, '4.188'),
+      (FontAwesomeIcons.flutter, '0'),
+      (FontAwesomeIcons.fire, '2.094'),
+      (Icons.code_rounded, '4.188'),
     ];
 
     return icons.map((item) {
       return AnimatedBuilder(
         animation: _orbitController,
         builder: (context, child) {
-          final angle = _orbitController.value * 2 * pi + double.parse(item.$3);
+          final angle = _orbitController.value * 2 * pi + double.parse(item.$2);
           final x = cos(angle) * orbitRadius;
           final y = sin(angle) * orbitRadius;
           return Transform.translate(offset: Offset(x, y), child: child);
@@ -552,7 +542,7 @@ class _HeroSectionState extends State<HeroSection>
           padding: const EdgeInsets.all(10),
           width: 44,
           height: 44,
-          child: Icon(item.$1, color: item.$2, size: 18),
+          child: Icon(item.$1, size: 18),
         ),
       );
     }).toList();

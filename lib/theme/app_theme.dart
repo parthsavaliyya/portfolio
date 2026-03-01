@@ -13,19 +13,19 @@ class AppColors {
   static const lightCard = Color(0xFFFFFFFF);
 
   // ── Brand accent greens ────────────────────────────────
-  static const green = Color(0xFF5DD62C); // primary accent
-  static const darkGreen = Color(0xFF337418); // hover / dark variant
+  static const green = Color(0xFF54C5F8); // primary accent
+  static const darkGreen = Color(0xFF01579B); // hover / dark variant
 
   // ── Keep old names as aliases so no widget breaks ─────
-  static const cyan = Color(0xFF5DD62C); // → green
-  static const purple = Color(0xFF337418); // → dark green
-  static const neonGreen = Color(0xFF5DD62C);
-  static const amber = Color(0xFF5DD62C); // resume button
-  static const pink = Color(0xFF5DD62C);
+  static const cyan = Color(0xFF54C5F8); // → green
+  static const purple = Color(0xFF01579B); // → dark green
+  static const neonGreen = Color(0xFF54C5F8);
+  static const amber = Color(0xFF54C5F8); // resume button
+  static const pink = Color(0xFF54C5F8);
 
   // ── Gradient ───────────────────────────────────────────
-  static const gradientStart = Color(0xFF5DD62C);
-  static const gradientEnd = Color(0xFF337418);
+  static const gradientStart = Color(0xFF54C5F8);
+  static const gradientEnd = Color(0xFF01579B);
 
   // ── Glass surfaces ─────────────────────────────────────
   static const darkGlass = Color(0x28FFFFFF); // white 16%

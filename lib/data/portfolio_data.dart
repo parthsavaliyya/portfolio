@@ -89,8 +89,8 @@ class PortfolioData {
       isIosExclusive: true,
       isFeatured: true,
       emoji: '🎨',
-      gradientStart: '#5DD62C',
-      gradientEnd: '#337418',
+      gradientStart: '#54C5F8',
+      gradientEnd: '#01579B',
       bannerImagePathLight:
           'assets/images/application_banners/ai_img_light.jpg',
       bannerImagePathDark: 'assets/images/application_banners/ai_img_dark.jpg',
@@ -105,8 +105,8 @@ class PortfolioData {
       company: 'SmartTechnica Infotech',
       techStack: ['GetX', 'REST APIs', 'Firebase', 'Push Notification'],
       emoji: '🛍️',
-      gradientStart: '#5DD62C',
-      gradientEnd: '#337418',
+      gradientStart: '#54C5F8',
+      gradientEnd: '#01579B',
       bannerImagePathLight:
           'assets/images/application_banners/kutuma_light.jpg',
       bannerImagePathDark: 'assets/images/application_banners/kutuma_dark.jpg',
@@ -121,10 +121,10 @@ class PortfolioData {
       company: 'SmartTechnica Infotech',
       techStack: ['GetX', 'REST APIs', 'Analytics', 'Crashlytics'],
       emoji: '📊',
-      gradientStart: '#5DD62C',
-      gradientEnd: '#337418',
+      gradientStart: '#54C5F8',
+      gradientEnd: '#01579B',
       bannerImagePathLight:
-          'assets/images/application_banners/munshiji_light.png',
+          'assets/images/application_banners/munshiji_light.jpg',
       bannerImagePathDark:
           'assets/images/application_banners/munshiji_dark.jpg',
       appStoreUrl:
@@ -138,8 +138,8 @@ class PortfolioData {
       company: 'Weapp Infotech',
       techStack: ['GetX', 'Firestore', 'Realtime Database', 'SQLite'],
       emoji: '📝',
-      gradientStart: '#5DD62C',
-      gradientEnd: '#337418',
+      gradientStart: '#54C5F8',
+      gradientEnd: '#01579B',
       bannerImagePathLight:
           'assets/images/application_banners/my_dairy_light.jpg',
       bannerImagePathDark:
@@ -333,7 +333,6 @@ class PortfolioData {
       "quote": "Hard work beats talent when talent doesn’t work hard.",
       "author": "Tim Notke"
     },
-    {"quote": "Stay hungry, stay foolish.", "author": "Steve Jobs"},
     {
       "quote": "The best way to predict the future is to invent it.",
       "author": "Alan Kay"
